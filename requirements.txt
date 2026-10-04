@@ -1,0 +1,24 @@
+# cube_pick_and_place 依赖清单
+# 环境：Python 3.10（conda 环境 lerobot-mujoco-tutorial，版本为该环境实测组合）
+# 安装：在项目根目录执行  pip install -r requirements.txt
+
+# ---- 核心依赖（README「环境准备」）----
+mujoco==3.1.6
+torch==2.6.0
+torchvision==0.21.0
+numpy==2.2.6
+pillow==12.3.0
+
+# lerobot：环境实测从 GitHub 指定 commit 安装
+git+https://github.com/huggingface/lerobot.git@10b7b3532543b4adfb65760f02a49b4c537afde7
+
+# ---- 脚本直接 import 的其余依赖 ----
+opencv-python-headless==5.0.0.93   # cv2
+matplotlib==3.10.9
+pandas==2.3.3
+scipy==1.15.3
+termcolor==3.3.0
+glfw==2.10.2
+pyautogui==0.9.54
+
+# 说明：transformers / diffusers / datasets / gymnasium / h5py 等由 lerobot 自动带入，无需手动列出。

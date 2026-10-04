@@ -1,0 +1,21 @@
+<mujoco model="cube_5cm">
+  <worldbody>
+    <!-- body 名保留 body_obj_mug_5 以兼容 lerobot 数据集接口与 FSM 参考代码 -->
+    <body name="body_obj_mug_5">
+      <freejoint />
+      <body name="object_mug_5">
+        <!-- 5cm 立方体：half-size = 0.025m。
+             friction = [切向 扭转 滚动]，全部调高以增强夹持与桌面摩擦。
+             density=1000 让立方体更接近真实木块重量（~125g），惯性更稳。 -->
+        <geom name="cube_5cm_geom" type="box" size="0.025 0.025 0.025"
+              density="1000" friction="1.5 0.3 0.3"
+              solimp="0.998 0.998 0.001" solref="0.001 1"
+              rgba="0.2 0.6 0.9 1.0" />
+      </body>
+      <!-- 与原 mug 接口对齐：bottom/top site 供高度测量，horizontal_radius 供抓取半径 -->
+      <site rgba="0 0 0 0" size="0.005" pos="0 0 -0.025" name="bottom_site_mug_5" />
+      <site rgba="0 0 0 0" size="0.005" pos="0 0 0.025" name="top_site_mug_5" />
+      <site rgba="0 0 0 0" size="0.005" pos="0.025 0 0" name="horizontal_radius_site_mug_5" />
+    </body>
+  </worldbody>
+</mujoco>

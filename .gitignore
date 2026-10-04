@@ -1,0 +1,20 @@
+# ---- 采集的数据集（体积大，本地生成，不推送）----
+demo_data*/
+data104/
+
+# ---- 训练 checkpoint / 模型文件（不推送）----
+ckpt/
+
+# ---- 实验记录（仅本地维护，不推送）----
+todolist.md
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ---- 编辑器配置 ----
+.vscode/
+
+# ---- 其他本地生成物 ----
+.DS_Store
